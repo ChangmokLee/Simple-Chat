@@ -16,7 +16,7 @@ I made a private server available for chatting using xampp.
 
 [^3]:{Describe the tools that you used to develop the software}
 
-[^4}:{Describe the programming language that you used and any libraries.}
+[^4]:{Describe the programming language that you used and any libraries.}
 
 # Useful Websites
 
