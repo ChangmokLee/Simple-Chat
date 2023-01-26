@@ -2,7 +2,7 @@
 
 This is a chat website using nodejs. Both the server and the client are written in JavaScript, making it easy to write code.I opened a private server using xampp. I've always wondered how to chat on the web. So, with this project, I analyzed and studied each line of code in detail.
 
-// [Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](http://youtube.link.goes.here)
 
 # Network Communication
 
@@ -21,7 +21,7 @@ I made a private server available for chatting using xampp.
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
+* [Web Site Name]([https://www.apachefriends.org/index.html])
 * [Web Site Name](http://url.link.goes.here)
 
 # Future Work
