@@ -8,7 +8,7 @@ This is a chat website using nodejs. Both the server and the client are written 
 
 I made a private server available for chatting using xampp.
 
-{Identify if you are using TCP or UDP and what port numbers are used.}
+[^1]:{Identify if you are using TCP or UDP and what port numbers are used.}
 
 {Identify the format of messages being sent between the client and server or the messages sent between two peers.}
 
