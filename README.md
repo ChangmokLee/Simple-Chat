@@ -1,18 +1,12 @@
 # Overview
 
-This is a chat website using nodejs. Both the server and the client are written in JavaScript, making it easy to write code.
-
-{Provide a description the networking program that you wrote. Describe how to use your software.  If you did Client/Server, then you will need to describe how to start both.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (you will need to show two pieces of software running and communicating with each other) and a walkthrough of the code.}
+This is a chat website using nodejs. Both the server and the client are written in JavaScript, making it easy to write code.I opened a private server using xampp. I've always wondered how to chat on the web. So, with this project, I analyzed and studied each line of code in detail.
 
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Network Communication
 
-{Describe the architecture that you used (client/server or peer-to-peer)}
+I made a private server available for chatting using xampp.
 
 {Identify if you are using TCP or UDP and what port numbers are used.}
 
