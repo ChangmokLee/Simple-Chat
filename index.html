@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        let MY_USER_ID = ""; //My Eigenvalue (Resident Number)
+
+        function connect() { //connect to websocket
+             if(!$.trim($("#myname").val())) {
+                alert("Please enter the contact name");
+                $("#myname").focus();
+                return false;
+             }
+             let my_user_name = $.trim($("#myname").val());
+
+             let websocket = new WebSocket("ws://localhost:8008");
+             websocket.onmessage = function(e) {    //When a message comes from the server, this event is executed
+                let message = JSON.parse(e.data);
+
+                if(message.code == "my_user_id") {  //user_id sent
+                    MY_USER_ID = message.msg;
+                    sendMyName(my_user_name);
+                    //alert("user_id received: " + MY_USER_ID);
+                }
+             }
+
+             function sendMyName(sending_user_name) {
+                let data = {"code":"connect_name","name":sending_user_name, "user_id":MY_USER_ID};
+                websocket.send(JSON.stringify(data));
+             }
+        }
+    </script>
+</head>
+<body>
+    <div style="width:820px; height:620px; background-color:#d0edf7; padding-top:10px; margin:0px auto; margin-top:40px">
+        <div style="width:800px; height:560; background-color:white; margin-left:10px; margin-right:10px">
+            <div style="width:100%; height:100%">
+                <div style="float:left; width:80%; background-color:eed" id="divMsg">
+                </div>
+                    <div style="float:right; width:20%; height:100%; box-shadow: 0 0 0 1px #d0e0f7 inset;">
+                        <div style="width:100%; height:30px; line-height:30px; background-color:#033279; color:white; text-align:center">
+                            user list
+                        </div>
+                        <div style="width:100%; line-height:22px; font-size:15px; text-align:center" id="divAllUser">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="width:100%; height:50px; text-align:center; padding-top:15px" id="divPannel">
+        <input type=text id="myname" value="" placeholder="Enter accessor name" style="font-size:18px; width:120px" onkeypress="javascript:if(event.keyCode==13){connect();return false;};return true;">
+        <button style="font-size:18px; background-color:black; color:white" onclick="connect();">access</button>
+    </div>
+</body>
+</html>
