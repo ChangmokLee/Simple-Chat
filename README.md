@@ -14,6 +14,8 @@ I made a private server available for chatting using xampp.
 
 # Development Environment
 
+Visual Studio Code
+
 [^3]:{Describe the tools that you used to develop the software}
 
 [^4]:{Describe the programming language that you used and any libraries.}
@@ -27,6 +29,5 @@ I made a private server available for chatting using xampp.
 # Future Work
 
 [^5]:{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* details of the design
+* completeness of code
